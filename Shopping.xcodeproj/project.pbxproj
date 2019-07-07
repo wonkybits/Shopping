@@ -3,25 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A1A60D922C5496300442BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60D822C5496300442BCC /* AppDelegate.swift */; };
-		4A1A60DB22C5496300442BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60DA22C5496300442BCC /* ViewController.swift */; };
 		4A1A60DE22C5496300442BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A60DC22C5496300442BCC /* Main.storyboard */; };
 		4A1A60E022C5496400442BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A60DF22C5496400442BCC /* Assets.xcassets */; };
 		4A1A60E322C5496400442BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A60E122C5496400442BCC /* LaunchScreen.storyboard */; };
+		4A1A60EF22C54D1A00442BCC /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60EE22C54D1A00442BCC /* ShoppingListViewController.swift */; };
+		4A1A60F122C54D2D00442BCC /* ShoppingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F022C54D2D00442BCC /* ShoppingItemViewController.swift */; };
+		4A1A60F322C5503500442BCC /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F222C5503500442BCC /* SwipeTableViewController.swift */; };
+		4A1A60F522C5554400442BCC /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F422C5554400442BCC /* ShoppingList.swift */; };
+		4A1A60F722C5555A00442BCC /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F622C5555A00442BCC /* ShoppingItem.swift */; };
+		8A590574CE913B0907BD8269 /* Pods_Shopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BD6BB47B90569B229868459 /* Pods-Shopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping.release.xcconfig"; path = "Target Support Files/Pods-Shopping/Pods-Shopping.release.xcconfig"; sourceTree = "<group>"; };
 		4A1A60D522C5496300442BCC /* Shopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1A60D822C5496300442BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A1A60DA22C5496300442BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A1A60DD22C5496300442BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A1A60DF22C5496400442BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A1A60E222C5496400442BCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A1A60E422C5496400442BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A1A60EE22C54D1A00442BCC /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		4A1A60F022C54D2D00442BCC /* ShoppingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemViewController.swift; sourceTree = "<group>"; };
+		4A1A60F222C5503500442BCC /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		4A1A60F422C5554400442BCC /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		4A1A60F622C5555A00442BCC /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A7CF0AFE764AAE2278A1F3A /* Pods-Shopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping.debug.xcconfig"; path = "Target Support Files/Pods-Shopping/Pods-Shopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A590574CE913B0907BD8269 /* Pods_Shopping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				4A1A60D722C5496300442BCC /* Shopping */,
 				4A1A60D622C5496300442BCC /* Products */,
+				4FA64ADFF28C3A669230A3CA /* Pods */,
+				59451C9A00E2EB67AF87D97F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,66 @@
 			isa = PBXGroup;
 			children = (
 				4A1A60D822C5496300442BCC /* AppDelegate.swift */,
-				4A1A60DA22C5496300442BCC /* ViewController.swift */,
-				4A1A60DC22C5496300442BCC /* Main.storyboard */,
-				4A1A60DF22C5496400442BCC /* Assets.xcassets */,
-				4A1A60E122C5496400442BCC /* LaunchScreen.storyboard */,
+				4A1A60EB22C54C2800442BCC /* Model */,
+				4A1A60EA22C54C2100442BCC /* View */,
+				4A1A60EC22C54C2F00442BCC /* Controller */,
+				4A1A60ED22C54C4E00442BCC /* Support FIles */,
 				4A1A60E422C5496400442BCC /* Info.plist */,
 			);
 			path = Shopping;
+			sourceTree = "<group>";
+		};
+		4A1A60EA22C54C2100442BCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A60DC22C5496300442BCC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A1A60EB22C54C2800442BCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A60F422C5554400442BCC /* ShoppingList.swift */,
+				4A1A60F622C5555A00442BCC /* ShoppingItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A1A60EC22C54C2F00442BCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A60EE22C54D1A00442BCC /* ShoppingListViewController.swift */,
+				4A1A60F022C54D2D00442BCC /* ShoppingItemViewController.swift */,
+				4A1A60F222C5503500442BCC /* SwipeTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A1A60ED22C54C4E00442BCC /* Support FIles */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A60E122C5496400442BCC /* LaunchScreen.storyboard */,
+				4A1A60DF22C5496400442BCC /* Assets.xcassets */,
+			);
+			path = "Support FIles";
+			sourceTree = "<group>";
+		};
+		4FA64ADFF28C3A669230A3CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A7CF0AFE764AAE2278A1F3A /* Pods-Shopping.debug.xcconfig */,
+				3BD6BB47B90569B229868459 /* Pods-Shopping.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		59451C9A00E2EB67AF87D97F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A1A60E722C5496400442BCC /* Build configuration list for PBXNativeTarget "Shopping" */;
 			buildPhases = (
+				11B1175629F970C768027BE5 /* [CP] Check Pods Manifest.lock */,
 				4A1A60D122C5496300442BCC /* Sources */,
 				4A1A60D222C5496300442BCC /* Frameworks */,
 				4A1A60D322C5496300442BCC /* Resources */,
+				8541E82ACF8C0EF50A85AF41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +200,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11B1175629F970C768027BE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shopping-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8541E82ACF8C0EF50A85AF41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shopping/Pods-Shopping-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shopping/Pods-Shopping-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shopping/Pods-Shopping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A1A60D122C5496300442BCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1A60DB22C5496300442BCC /* ViewController.swift in Sources */,
+				4A1A60F722C5555A00442BCC /* ShoppingItem.swift in Sources */,
+				4A1A60F322C5503500442BCC /* SwipeTableViewController.swift in Sources */,
 				4A1A60D922C5496300442BCC /* AppDelegate.swift in Sources */,
+				4A1A60F522C5554400442BCC /* ShoppingList.swift in Sources */,
+				4A1A60F122C54D2D00442BCC /* ShoppingItemViewController.swift in Sources */,
+				4A1A60EF22C54D1A00442BCC /* ShoppingListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +396,7 @@
 		};
 		4A1A60E822C5496400442BCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7CF0AFE764AAE2278A1F3A /* Pods-Shopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +415,7 @@
 		};
 		4A1A60E922C5496400442BCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD6BB47B90569B229868459 /* Pods-Shopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
