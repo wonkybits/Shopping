@@ -30,7 +30,7 @@ class ShoppingListController {
         return ShoppingListController.shoppingLists.count
     }
     
-    func getList(index: Int) -> ShoppingList? {
+    func getList(index: Int) -> ShoppingList {
         return ShoppingListController.shoppingLists[index]
     }
 }
