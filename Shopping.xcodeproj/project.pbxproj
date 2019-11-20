@@ -17,7 +17,6 @@
 		4A1A60F522C5554400442BCC /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F422C5554400442BCC /* ShoppingList.swift */; };
 		4A1A60F722C5555A00442BCC /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F622C5555A00442BCC /* ShoppingItem.swift */; };
 		4A46F0FD2384CF0C00653A14 /* ShoppingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46F0FC2384CF0C00653A14 /* ShoppingListController.swift */; };
-		4A46F0FF2384CF3B00653A14 /* ShoppingItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46F0FE2384CF3B00653A14 /* ShoppingItemController.swift */; };
 		8A590574CE913B0907BD8269 /* Pods_Shopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		4A1A60F422C5554400442BCC /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		4A1A60F622C5555A00442BCC /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		4A46F0FC2384CF0C00653A14 /* ShoppingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListController.swift; sourceTree = "<group>"; };
-		4A46F0FE2384CF3B00653A14 /* ShoppingItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemController.swift; sourceTree = "<group>"; };
 		54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7CF0AFE764AAE2278A1F3A /* Pods-Shopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping.debug.xcconfig"; path = "Target Support Files/Pods-Shopping/Pods-Shopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +105,6 @@
 				4A1A60F022C54D2D00442BCC /* ShoppingItemViewController.swift */,
 				4A1A60F222C5503500442BCC /* SwipeTableViewController.swift */,
 				4A46F0FC2384CF0C00653A14 /* ShoppingListController.swift */,
-				4A46F0FE2384CF3B00653A14 /* ShoppingItemController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 			files = (
 				4A1A60F722C5555A00442BCC /* ShoppingItem.swift in Sources */,
 				4A1A60F322C5503500442BCC /* SwipeTableViewController.swift in Sources */,
-				4A46F0FF2384CF3B00653A14 /* ShoppingItemController.swift in Sources */,
 				4A1A60D922C5496300442BCC /* AppDelegate.swift in Sources */,
 				4A46F0FD2384CF0C00653A14 /* ShoppingListController.swift in Sources */,
 				4A1A60F522C5554400442BCC /* ShoppingList.swift in Sources */,
