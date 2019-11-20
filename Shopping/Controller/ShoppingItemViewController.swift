@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class ShoppingItemViewController: SwipeTableViewController {
     
     var selectedList = ShoppingList()
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,14 @@ class ShoppingItemViewController: SwipeTableViewController {
     
     //MARK: - TableView Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedList.items[indexPath.row].done = !selectedList.items[indexPath.row].done
+        let item = selectedList.items[indexPath.row]
+        do {
+            try realm.write {
+                item.done = !item.done
+            }
+        } catch {
+            print("Error saving done status, \(error)")
+        }
         
         tableView.reloadData()
         
