@@ -10,19 +10,13 @@ import Foundation
 import RealmSwift
 
 class ShoppingItemViewController: SwipeTableViewController {
-    var shoppingItems: Results<ShoppingItem>?
-    let realm = try! Realm()
     
-    var selectedList : ShoppingList? {
-        didSet {
-            loadShoppingItems()
-        }
-    }
+    var selectedList = ShoppingList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = selectedList?.name
+        navigationItem.title = selectedList.name
         
         tableView.rowHeight = 80.0
     }
@@ -30,19 +24,15 @@ class ShoppingItemViewController: SwipeTableViewController {
     
     //MARK: - TableView Datasource Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingItems?.count ?? 1
+        return selectedList.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        if let item = shoppingItems?[indexPath.row] {
-            cell.textLabel?.text = item.name
-            cell.detailTextLabel?.text = item.qty
-            cell.accessoryType = item.done ? .checkmark : .none
-        } else {
-            cell.textLabel?.text = "No Items Added"
-        }
+        cell.textLabel?.text = selectedList.items[indexPath.row].name
+        cell.detailTextLabel?.text = selectedList.items[indexPath.row].qty
+        cell.accessoryType = selectedList.items[indexPath.row].done ? .checkmark : .none
         
         return cell
     }
@@ -50,15 +40,7 @@ class ShoppingItemViewController: SwipeTableViewController {
     
     //MARK: - TableView Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = shoppingItems?[indexPath.row] {
-            do {
-                try realm.write {
-                    item.done = !item.done
-                }
-            } catch {
-                print("Error saving done status, \(error)")
-            }
-        }
+        selectedList.items[indexPath.row].done = !selectedList.items[indexPath.row].done
         
         tableView.reloadData()
         
@@ -66,22 +48,9 @@ class ShoppingItemViewController: SwipeTableViewController {
     }
     
     //MARK: - Data Model Methods
-    func loadShoppingItems() {
-        shoppingItems = selectedList?.items.sorted(byKeyPath: "name", ascending: true)
-        
-        tableView.reloadData()
-    }
     
     override func removeFromModel(at indexPath: IndexPath) {
-        if let itemForDeletion = shoppingItems?[indexPath.row] {
-            do {
-                try realm.write {
-                    realm.delete(itemForDeletion)
-                }
-            } catch {
-                print("Error deleting item, \(error)")
-            }
-        }
+        selectedList.items.remove(at: indexPath.row)
     }
     
     
@@ -93,18 +62,10 @@ class ShoppingItemViewController: SwipeTableViewController {
         let alert = UIAlertController(title: "Add Shopping Item", message: "", preferredStyle: .alert)
         
         let addAction = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            if let currentList = self.selectedList {
-                do {
-                    try self.realm.write {
-                        let newItem = ShoppingItem()
-                        newItem.name = nameTextField.text!
-                        newItem.qty = qtyTextField.text!
-                        currentList.items.append(newItem)
-                    }
-                } catch {
-                    print("Error saving new items, \(error)")
-                }
-            }
+            let newItem = ShoppingItem()
+            newItem.name = nameTextField.text!
+            newItem.qty = qtyTextField.text!
+            self.selectedList.items.append(newItem)
             
             self.tableView.reloadData()
         }
