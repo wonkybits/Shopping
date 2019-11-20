@@ -17,6 +17,7 @@
 		4A1A60F722C5555A00442BCC /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A60F622C5555A00442BCC /* ShoppingItem.swift */; };
 		4A46F0FD2384CF0C00653A14 /* ShoppingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46F0FC2384CF0C00653A14 /* ShoppingListController.swift */; };
 		4A46F1072384FAA600653A14 /* ShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46F1062384FAA600653A14 /* ShoppingTests.swift */; };
+		4A46F10F2385247C00653A14 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46F10E2385247C00653A14 /* PersistenceController.swift */; };
 		8A590574CE913B0907BD8269 /* Pods_Shopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		4A46F1042384FAA600653A14 /* ShoppingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A46F1062384FAA600653A14 /* ShoppingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTests.swift; sourceTree = "<group>"; };
 		4A46F1082384FAA600653A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A46F10E2385247C00653A14 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		54F99FD38FCDEE113CD4D15A /* Pods_Shopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7CF0AFE764AAE2278A1F3A /* Pods-Shopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping.debug.xcconfig"; path = "Target Support Files/Pods-Shopping/Pods-Shopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				4A1A60F022C54D2D00442BCC /* ShoppingItemViewController.swift */,
 				4A1A60F222C5503500442BCC /* SwipeTableViewController.swift */,
 				4A46F0FC2384CF0C00653A14 /* ShoppingListController.swift */,
+				4A46F10E2385247C00653A14 /* PersistenceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				4A1A60F522C5554400442BCC /* ShoppingList.swift in Sources */,
 				4A1A60F122C54D2D00442BCC /* ShoppingItemViewController.swift in Sources */,
 				4A1A60EF22C54D1A00442BCC /* ShoppingListViewController.swift in Sources */,
+				4A46F10F2385247C00653A14 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
