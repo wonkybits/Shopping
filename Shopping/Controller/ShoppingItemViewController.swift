@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RealmSwift
+import UIKit
 
 class ShoppingItemViewController: SwipeTableViewController {
     
