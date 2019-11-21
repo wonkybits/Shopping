@@ -49,4 +49,14 @@ class ShoppingListController {
             }
         }
     }
+    
+    func removeAll() {
+        do {
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
+            print("Error clearing shopping list, \(error)")
+        }
+    }
 }
