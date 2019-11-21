@@ -41,6 +41,7 @@ class ShoppingListController {
         if let listForDeletion = getList(index: index) {
             do {
                 try realm.write {
+                    realm.delete(listForDeletion.items)
                     realm.delete(listForDeletion)
                 }
             } catch {
