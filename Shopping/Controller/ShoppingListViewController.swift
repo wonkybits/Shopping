@@ -22,14 +22,16 @@ class ShoppingListViewController: SwipeTableViewController {
     
     //MARK: - TableView Datasource Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ShoppingListController.shoppingLists.count
+        return slc.getListCount() ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        let shoppingList = ShoppingListController.shoppingLists[indexPath.row]
-        cell.textLabel?.text = shoppingList.name
+        if let shoppingList = slc.getList(index: indexPath.row) {
+            cell.textLabel?.text = shoppingList.name
+            
+        }
         
         return cell
     }
@@ -43,7 +45,7 @@ class ShoppingListViewController: SwipeTableViewController {
         let destinationVC = segue.destination as! ShoppingItemViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedList = ShoppingListController.shoppingLists[indexPath.row]
+            destinationVC.selectedList = slc.getList(index: indexPath.row)
         }
     }
     
@@ -56,7 +58,9 @@ class ShoppingListViewController: SwipeTableViewController {
         let alert = UIAlertController(title: "Create Shopping List", message: "", preferredStyle: .alert)
         
         let addAction = UIAlertAction(title: "Add List", style: .default) { (action) in
-            self.slc.addShoppingList(listName: textField.text!)
+            let newShoppingList = ShoppingList()
+            newShoppingList.name = textField.text!
+            self.slc.addList(list: newShoppingList)
             self.tableView.reloadData()
         }
         
@@ -74,6 +78,6 @@ class ShoppingListViewController: SwipeTableViewController {
     }
     
     override func removeFromModel(at indexPath: IndexPath) {
-        slc.removeList(index: indexPath.row)
+        slc.removeList(at: indexPath.row)
     }
 }

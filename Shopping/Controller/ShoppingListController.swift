@@ -2,35 +2,50 @@
 //  ShoppingListController.swift
 //  Shopping
 //
-//  Created by Phillip Stene on 11/19/19.
+//  Created by Phillip Stene on 11/20/19.
 //  Copyright © 2019 Phillip Stene. All rights reserved.
 //
 
 import Foundation
+import RealmSwift
 
 class ShoppingListController {
     
-    static var shoppingLists = [ShoppingList]()
+    let realm = try! Realm()
+    
+    var shoppingLists: Results<ShoppingList>?
     
     init() {
-        
+        shoppingLists = realm.objects(ShoppingList.self)
     }
     
-    func addShoppingList(listName: String) {
-        let newShoppingList = ShoppingList()
-        newShoppingList.name = listName
-        ShoppingListController.shoppingLists.append(newShoppingList)
+    func getListCount() -> Int? {
+        return shoppingLists?.count
     }
     
-    func removeList(index: Int) {
-        ShoppingListController.shoppingLists.remove(at: index)
+    func getList(index : Int) -> ShoppingList? {
+        return shoppingLists?[index]
     }
     
-    func getListCount() -> Int {
-        return ShoppingListController.shoppingLists.count
+    func addList(list : ShoppingList) {
+        do {
+            try realm.write {
+                realm.add(list)
+            }
+        } catch {
+            print("Error saving shopping list, \(error)")
+        }
     }
     
-    func getList(index: Int) -> ShoppingList {
-        return ShoppingListController.shoppingLists[index]
+    func removeList(at index : Int) {
+        if let listForDeletion = getList(index: index) {
+            do {
+                try realm.write {
+                    realm.delete(listForDeletion)
+                }
+            } catch {
+                print("Error deleting shopping list, \(error)")
+            }
+        }
     }
 }
